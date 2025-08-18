@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DAR AL AMANA — Immobilier Tunisie pour Tunisiens à l’étranger (FR/AR/EN)</title>
+  <meta name="description" content="DAR AL AMANA: Service réservé aux Tunisiens résidant à l'étranger — terrains, ventes & locations, construction et gestion de biens en Tunisie, transparence totale." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:'#eef6ff',100:'#d9ebff',200:'#b7d6fe',300:'#8ebafe',400:'#5f95fb',
+              500:'#2f6ef7',600:'#2356d6',700:'#1d45ab',800:'#1a3b8a',900:'#172f6c'
+            },
+            sand: '#E9DCC9',
+            olive: '#6B7D5B'
+          },
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'], serif: ['Merriweather','Georgia','serif'], arabic: ['Cairo','Inter','system-ui','sans-serif'] },
+          boxShadow: { soft: '0 10px 25px rgba(0,0,0,0.06)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    [lang="fr"] .lang-ar, [lang="fr"] .lang-en { display:none; }
+    [lang="ar"] .lang-fr, [lang="ar"] .lang-en { display:none; }
+    [lang="en"] .lang-fr, [lang="en"] .lang-ar { display:none; }
+    [lang="ar"] body { direction: rtl; }
+    [lang="fr"] body, [lang="en"] body { direction: ltr; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+  <header class="bg-white/80 backdrop-blur sticky top-0 z-40 shadow">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3" aria-label="DAR AL AMANA">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-brand-600 text-white shadow-soft">
+          <svg viewBox="0 0 24 24" class="w-6 h-6" aria-hidden="true" fill="currentColor">
+            <path d="M12 3l9 7v10a1 1 0 0 1-1 1h-5.5a.5.5 0 0 1-.5-.5V14a2 2 0 0 0-4 0v6.5a.5.5 0 0 1-.5.5H4a1 1 0 0 1-1-1V10l9-7z"/>
+          </svg>
+        </span>
+        <div class="leading-tight">
+          <div class="font-serif text-xl tracking-tight">DAR AL AMANA</div>
+          <div class="text-xs text-slate-500 lang-fr">L’honnêteté avant le profit</div>
+          <div class="text-xs text-slate-500 lang-ar">الأمانة قبل الربح</div>
+          <div class="text-xs text-slate-500 lang-en">Honesty before profit</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#services" class="hover:text-brand-700 lang-fr">Services</a>
+        <a href="#listings" class="hover:text-brand-700 lang-fr">Annonces</a>
+        <a href="#process" class="hover:text-brand-700 lang-fr">Process & Frais</a>
+        <a href="#testimonials" class="hover:text-brand-700 lang-fr">Témoignages</a>
+        <a href="#about" class="hover:text-brand-700 lang-fr">À propos</a>
+        <a href="#contact" class="hover:text-brand-700 lang-fr">Contact</a>
+
+        <a href="#services" class="hover:text-brand-700 lang-ar">الخدمات</a>
+        <a href="#listings" class="hover:text-brand-700 lang-ar">العقارات</a>
+        <a href="#process" class="hover:text-brand-700 lang-ar">المنهج والرسوم</a>
+        <a href="#testimonials" class="hover:text-brand-700 lang-ar">آراء العملاء</a>
+        <a href="#about" class="hover:text-brand-700 lang-ar">من نحن</a>
+        <a href="#contact" class="hover:text-brand-700 lang-ar">اتصل بنا</a>
+
+        <a href="#services" class="hover:text-brand-700 lang-en">Services</a>
+        <a href="#listings" class="hover:text-brand-700 lang-en">Listings</a>
+        <a href="#process" class="hover:text-brand-700 lang-en">Process & Fees</a>
+        <a href="#testimonials" class="hover:text-brand-700 lang-en">Testimonials</a>
+        <a href="#about" class="hover:text-brand-700 lang-en">About</a>
+        <a href="#contact" class="hover:text-brand-700 lang-en">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="btn-fr" class="px-3 py-1.5 rounded-xl border text-sm hover:bg-slate-100 aria-selected:bg-brand-600 aria-selected:text-white" aria-selected="true">FR</button>
+        <button id="btn-ar" class="px-3 py-1.5 rounded-xl border text-sm hover:bg-slate-100">AR</button>
+        <button id="btn-en" class="px-3 py-1.5 rounded-xl border text-sm hover:bg-slate-100">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-50 to-transparent pointer-events-none"></div>
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="font-serif text-3xl md:text-5xl leading-tight mb-4 lang-fr">Avec <span class="text-brand-700">DAR AL AMANA</span>, vos biens sont gérés comme si c’était les nôtres.</h1>
+        <h1 class="font-arabic text-3xl md:text-5xl leading-tight mb-4 lang-ar">مع <span class="text-brand-700">دار الأمانة</span>، تُدار أملاككم كما لو كانت أملاكنا.</h1>
+        <h1 class="font-serif text-3xl md:text-5xl leading-tight mb-4 lang-en">With <span class="text-brand-700">DAR AL AMANA</span>, your properties are managed as if they were our own.</h1>
+        <p class="text-lg text-slate-600 mb-6 lang-fr">Terrains, vente & location, construction et gestion de trésorerie pour Tunisiens de France. Transparence totale : chaque dinar est tracé.</p>
+        <p class="text-lg text-slate-600 mb-6 lang-ar">قطع أراضٍ، بيع وتأجير، بناء، وإدارة مالية للجالية في فرنسا. شفافية كاملة: كل دينار مُثبت.</p>
+        <p class="text-lg text-slate-600 mb-6 lang-en">Land, sales & rentals, construction and funds management for Tunisians in France. Full transparency: every dinar is documented.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#listings" class="px-5 py-3 rounded-2xl bg-brand-600 text-white shadow-soft hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-300 lang-fr">Voir les terrains disponibles</a>
+          <a href="#listings" class="px-5 py-3 rounded-2xl bg-brand-600 text-white shadow-soft hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-300 lang-ar">تصفح العروض المتاحة</a>
+          <a href="#listings" class="px-5 py-3 rounded-2xl bg-brand-600 text-white shadow-soft hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-300 lang-en">View available listings</a>
+          <a href="#contact" class="px-5 py-3 rounded-2xl bg-white border hover:bg-slate-50 shadow-soft lang-fr">Nous confier un bien</a>
+          <a href="#contact" class="px-5 py-3 rounded-2xl bg-white border hover:bg-slate-50 shadow-soft lang-ar">أرسل لنا تفاصيل عقارك</a>
+          <a href="#contact" class="px-5 py-3 rounded-2xl bg-white border hover:bg-slate-50 shadow-soft lang-en">Entrust us with your property</a>
+        </div>
+        <div class="mt-6 grid grid-cols-3 md:grid-cols-6 gap-4 text-sm text-slate-600">
+          <div class="bg-white rounded-2xl p-4 shadow-soft">
+            <div class="font-semibold lang-fr">20+ familles</div>
+            <div class="font-arabic lang-ar">أكثر من 20 عائلة</div>
+            <div class="lang-en font-semibold">20+ families</div>
+            <div class="text-xs">FR ↔ TN</div>
+          </div>
+          <div class="bg-white rounded-2xl p-4 shadow-soft">
+            <div class="font-semibold lang-fr">Dépenses tracées</div>
+            <div class="font-arabic lang-ar">مصروفات موثقة</div>
+            <div class="lang-en font-semibold">Tracked expenses</div>
+            <div class="text-xs">Reçus & rapports</div>
+          </div>
+          <div class="bg-white rounded-2xl p-4 shadow-soft">
+            <div class="font-semibold lang-fr">Suivi chantier</div>
+            <div class="font-arabic lang-ar">متابعة أشغال</div>
+            <div class="lang-en font-semibold">Site supervision</div>
+            <div class="text-xs">Photos & vidéos</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="relative aspect-[4/3] rounded-3xl bg-gradient-to-br from-sand to-white shadow-soft overflow-hidden">
+          <div class="absolute inset-0 grid grid-cols-2 gap-4 p-6">
+            <div class="rounded-2xl bg-white/70 backdrop-blur p-4 flex flex-col justify-between">
+              <div>
+                <div class="text-xs text-slate-500 lang-fr">Exemple de relevé</div>
+                <div class="text-xs text-slate-500 lang-ar">نموذج كشف حساب</div>
+                <div class="text-xs text-slate-500 lang-en">Statement example</div>
+                <div class="mt-2 text-sm font-medium">Chantier #A-17</div>
+                <ul class="mt-2 text-xs space-y-1">
+                  <li>+ 3 500 TND — Acompte client</li>
+                  <li>- 1 200 TND — Fondation (facture #112)</li>
+                  <li>-   450 TND — Béton (ticket #884)</li>
+                </ul>
+              </div>
+              <div class="text-xs text-slate-500">Document PDF envoyé mensuellement</div>
+            </div>
+            <div class="rounded-2xl bg-white/70 backdrop-blur p-4">
+              <div class="text-xs text-slate-500 lang-fr">Suivi hebdomadaire</div>
+              <div class="text-xs text-slate-500 lang-ar">متابعة أسبوعية</div>
+              <div class="text-xs text-slate-500 lang-en">Weekly updates</div>
+              <div class="mt-3 h-full rounded-xl bg-slate-200"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expat-only notice -->
+  <div class="bg-amber-50 border-y border-amber-200">
+    <div class="max-w-6xl mx-auto px-4 py-3 text-sm text-amber-900 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+      <div class="lang-fr font-medium">Service réservé aux <strong>Tunisiens résidant à l’étranger</strong> (diaspora). Pas de service local.</div>
+      <div class="lang-ar font-arabic font-medium">الخدمة مخصّصة <strong>للتونسيين المقيمين بالخارج</strong> فقط. لا نقدم خدمة محلية.</div>
+      <div class="lang-en font-medium">Service for <strong>Tunisian expatriates only</strong>. Not available locally.</div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section id="services" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="font-serif text-2xl md:text-3xl mb-8 lang-fr">Services</h2>
+      <h2 class="font-arabic text-2xl md:text-3xl mb-8 lang-ar">الخدمات</h2>
+      <h2 class="font-serif text-2xl md:text-3xl mb-8 lang-en">Services</h2>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-3xl shadow-soft">
+          <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3 10l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9z"/></svg>
+          </div>
+          <div class="font-semibold mb-2 lang-fr">Terrains à vendre</div>
+          <div class="font-arabic font-semibold mb-2 lang-ar">قطع أراضٍ للبيع</div>
+          <div class="font-semibold mb-2 lang-en">Land for sale</div>
+          <p class="text-sm text-slate-600 lang-fr">Vérification du titre, plans & bornage. Dossier complet pour chaque terrain.</p>
+          <p class="text-sm text-slate-600 lang-ar">تحقق من الملكية والمخططات والتحديد. ملف كامل لكل قطعة.</p>
+          <p class="text-sm text-slate-600 lang-en">Title check, plans & boundary survey. Full file for each plot.</p>
+        </div>
+        <div class="bg-white p-6 rounded-3xl shadow-soft">
+          <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M4 12h16v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-8zm0-2V8l8-5 8 5v2H4z"/></svg>
+          </div>
+          <div class="font-semibold mb-2 lang-fr">Vente & Location</div>
+          <div class="font-arabic font-semibold mb-2 lang-ar">البيع والإيجار</div>
+          <div class="font-semibold mb-2 lang-en">Sales & Rentals</div>
+          <p class="text-sm text-slate-600 lang-fr">Photos, visites vidéo, contrats clairs, remise des clés & état des lieux.</p>
+          <p class="text-sm text-slate-600 lang-ar">صور وجولات فيديو وعقود واضحة وتسليم مفاتيح مع جرد.</p>
+          <p class="text-sm text-slate-600 lang-en">Photos, video tours, clear contracts, key handover & check-in report.</p>
+        </div>
+        <div class="bg-white p-6 rounded-3xl shadow-soft">
+          <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M21 10H3l9-7 9 7zM5 12h14v9H5z"/></svg>
+          </div>
+          <div class="font-semibold mb-2 lang-fr">Construction & suivi</div>
+          <div class="font-arabic font-semibold mb-2 lang-ar">البناء والمتابعة</div>
+          <div class="font-semibold mb-2 lang-en">Construction & supervision</div>
+          <p class="text-sm text-slate-600 lang-fr">Devis, planning, preuves de dépenses, photos/vidéos hebdomadaires.</p>
+          <p class="text-sm text-slate-600 lang-ar">عروض وأسعار، جدول زمني، إثباتات مصروفات، صور/فيديو أسبوعية.</p>
+          <p class="text-sm text-slate-600 lang-en">Quotes, schedule, expense proofs, weekly photos/videos.</p>
+        </div>
+        <div class="bg-white p-6 rounded-3xl shadow-soft">
+          <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 110 10 5 5 0 010-10zm-7 20a7 7 0 0114 0H5z"/></svg>
+          </div>
+          <div class="font-semibold mb-2 lang-fr">Gestion pour expatriés</div>
+          <div class="font-arabic font-semibold mb-2 lang-ar">إدارة للجالية بالخارج</div>
+          <div class="font-semibold mb-2 lang-en">Property management for expats</div>
+          <p class="text-sm text-slate-600 lang-fr">Relevé mensuel, factures, appels programmés, tout est documenté.</p>
+          <p class="text-sm text-slate-600 lang-ar">كشف شهري وفواتير ومكالمات مجدولة، كل شيء موثق.</p>
+          <p class="text-sm text-slate-600 lang-en">Monthly statement, invoices, scheduled calls — everything documented.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Listings -->
+  <section id="listings" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-end justify-between mb-6">
+        <h2 class="font-serif text-2xl md:text-3xl lang-fr">Annonces sélectionnées</h2>
+        <h2 class="font-arabic text-2xl md:text-3xl lang-ar">عقارات مختارة</h2>
+        <h2 class="font-serif text-2xl md:text-3xl lang-en">Featured listings</h2>
+        <a href="#contact" class="text-sm text-brand-700 hover:underline lang-fr">Publier mon bien</a>
+        <a href="#contact" class="text-sm text-brand-700 hover:underline lang-ar">أضف عقارك</a>
+        <a href="#contact" class="text-sm text-brand-700 hover:underline lang-en">List my property</a>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="rounded-3xl overflow-hidden shadow-soft bg-slate-50">
+          <div class="h-48 bg-gradient-to-br from-sand to-slate-200"></div>
+          <div class="p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold">Terrain à Mrezga</h3>
+              <span class="text-sm px-2 py-1 bg-emerald-100 text-emerald-700 rounded-full">Titre foncier OK</span>
+            </div>
+            <p class="text-sm text-slate-600">450 m² — Viabilisé — Plan & bornage dispo</p>
+            <div class="flex items-center justify-between text-sm mt-1">
+              <span class="font-medium">320 000 TND</span>
+              <a href="#contact" class="text-brand-700 hover:underline">Je suis intéressé</a>
+            </div>
+          </div>
+        </article>
+        <article class="rounded-3xl overflow-hidden shadow-soft bg-slate-50">
+          <div class="h-48 bg-gradient-to-br from-sand to-slate-200"></div>
+          <div class="p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold">Villa à Hammamet (Location)</h3>
+              <span class="text-sm px-2 py-1 bg-sky-100 text-sky-700 rounded-full">Location</span>
+            </div>
+            <p class="text-sm text-slate-600">3 chambres — Meublée — Proche plage</p>
+            <div class="flex items-center justify-between text-sm mt-1">
+              <span class="font-medium">3 200 TND / mois</span>
+              <a href="#contact" class="text-brand-700 hover:underline">Visiter</a>
+            </div>
+          </div>
+        </article>
+        <article class="rounded-3xl overflow-hidden shadow-soft bg-slate-50">
+          <div class="h-48 bg-gradient-to-br from-sand to-slate-200"></div>
+          <div class="p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold">Maison à Nabeul (Vente)</h3>
+              <span class="text-sm px-2 py-1 bg-amber-100 text-amber-700 rounded-full">Nouveau</span>
+            </div>
+            <p class="text-sm text-slate-600">120 m² — Rénovée — Quartier calme</p>
+            <div class="flex items-center justify-between text-sm mt-1">
+              <span class="font-medium">540 000 TND</span>
+              <a href="#contact" class="text-brand-700 hover:underline">Je suis intéressé</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="text-xs text-slate-500 mt-3 lang-fr">Chaque annonce comporte les documents: titre, plan, bornage, et vérifications de base.</p>
+      <p class="text-xs text-slate-500 mt-3 lang-ar">كل إعلان يتضمن الوثائق: الملكية والمخطط والتحديد والتحقق الأساسي.</p>
+      <p class="text-xs text-slate-500 mt-3 lang-en">Each listing includes documents: title deed, plan, boundary survey, and basic checks.</p>
+    </div>
+  </section>
+
+  <!-- Process & Fees -->
+  <section id="process" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="font-serif text-2xl md:text-3xl mb-6 lang-fr">Processus & Frais transparents</h2>
+      <h2 class="font-arabic text-2xl md:text-3xl mb-6 lang-ar">منهج واضح ورسوم شفافة</h2>
+      <h2 class="font-serif text-2xl md:text-3xl mb-6 lang-en">Clear process & transparent fees</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <ol class="space-y-3">
+          <li class="bg-white p-5 rounded-2xl shadow-soft">
+            <div class="font-semibold lang-fr">1) Étude & devis détaillé</div>
+            <div class="font-arabic font-semibold lang-ar">١) دراسة وعرض مفصل</div>
+            <div class="font-semibold lang-en">1) Study & detailed quote</div>
+            <p class="text-sm text-slate-600">Besoins, budget, délais.</p>
+          </li>
+          <li class="bg-white p-5 rounded-2xl shadow-soft">
+            <div class="font-semibold lang-fr">2) Contrat & planning</div>
+            <div class="font-arabic font-semibold lang-ar">٢) عقد وجدول زمني</div>
+            <div class="font-semibold lang-en">2) Contract & schedule</div>
+            <p class="text-sm text-slate-600">Délais/garanties écrits.</p>
+          </li>
+          <li class="bg-white p-5 rounded-2xl shadow-soft">
+            <div class="font-semibold lang-fr">3) Compte dédié & reçus</div>
+            <div class="font-arabic font-semibold lang-ar">٣) حساب مخصص وإيصالات</div>
+            <div class="font-semibold lang-en">3) Dedicated account & receipts</div>
+            <p class="text-sm text-slate-600">Chaque dinar est tracé.</p>
+          </li>
+          <li class="bg-white p-5 rounded-2xl shadow-soft">
+            <div class="font-semibold lang-fr">4) Suivi hebdomadaire</div>
+            <div class="font-arabic font-semibold lang-ar">٤) متابعة أسبوعية</div>
+            <div class="font-semibold lang-en">4) Weekly follow-up</div>
+            <p class="text-sm text-slate-600">Photos/vidéos + rapport.</p>
+          </li>
+          <li class="bg-white p-5 rounded-2xl shadow-soft">
+            <div class="font-semibold lang-fr">5) Réception & check-list</div>
+            <div class="font-arabic font-semibold lang-ar">٥) استلام وقائمة فحص</div>
+            <div class="font-semibold lang-en">5) Handover & checklist</div>
+            <p class="text-sm text-slate-600">Réserves levées.</p>
+          </li>
+          <li class="bg-white p-5 rounded-2xl shadow-soft">
+            <div class="font-semibold lang-fr">6) Dossier final</div>
+            <div class="font-arabic font-semibold lang-ar">٦) ملف نهائي</div>
+            <div class="font-semibold lang-en">6) Final handover file</div>
+            <p class="text-sm text-slate-600">Factures, plans, garanties.</p>
+          </li>
+        </ol>
+        <div class="bg-white p-6 rounded-3xl shadow-soft">
+          <h3 class="font-semibold mb-3 lang-fr">Barème indicatif</h3>
+          <h3 class="font-arabic font-semibold mb-3 lang-ar">جدول أسعار إرشادي</h3>
+          <h3 class="font-semibold mb-3 lang-en">Indicative rates</h3>
+          <ul class="space-y-2 text-sm">
+            <li class="flex justify-between border-b pb-2"><span class="lang-fr">Étude & devis</span><span>Gratuit</span></li>
+            <li class="flex justify-between border-b pb-2"><span class="lang-fr">Gestion de trésorerie</span><span>5–8% (selon projet)</span></li>
+            <li class="flex justify-between border-b pb-2"><span class="lang-fr">Suivi de chantier</span><span>Forfait / phase</span></li>
+            <li class="flex justify-between"><span class="lang-fr">Mise en vente/location</span><span>Barème transparent</span></li>
+            <li class="flex justify-between border-b pb-2"><span class="lang-en">Study & quote</span><span>Free</span></li>
+            <li class="flex justify-between border-b pb-2"><span class="lang-en">Funds management</span><span>5–8% (by project)</span></li>
+            <li class="flex justify-between border-b pb-2"><span class="lang-en">Site supervision</span><span>Flat / per phase</span></li>
+            <li class="flex justify-between"><span class="lang-en">Listing & sale/rent</span><span>Transparent rates</span></li>
+          </ul>
+          <p class="text-xs text-slate-500 mt-3 lang-fr">Les frais exacts sont confirmés par écrit avant démarrage.</p>
+          <p class="text-xs text-slate-500 mt-1 lang-ar">يتم تأكيد الرسوم كتابيًا قبل البدء.</p>
+          <p class="text-xs text-slate-500 mt-1 lang-en">Exact fees are confirmed in writing before we start.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="font-serif text-2xl md:text-3xl mb-8 lang-fr">Ils nous font confiance</h2>
+      <h2 class="font-arabic text-2xl md:text-3xl mb-8 lang-ar">ثقة عملائنا</h2>
+      <h2 class="font-serif text-2xl md:text-3xl mb-8 lang-en">Trusted by families</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <figure class="bg-slate-50 p-6 rounded-3xl shadow-soft">
+          <blockquote class="text-sm text-slate-700">“Chaque dépense justifiée par reçu et photo. Monji est honnête et présent.”</blockquote>
+          <figcaption class="mt-3 text-xs text-slate-500">Nadia — Paris</figcaption>
+        </figure>
+        <figure class="bg-slate-50 p-6 rounded-3xl shadow-soft">
+          <blockquote class="text-sm text-slate-700">“Il m’a construit la maison comme promis. Rapport WhatsApp chaque semaine.”</blockquote>
+          <figcaption class="mt-3 text-xs text-slate-500">Riadh — Lyon</figcaption>
+        </figure>
+        <figure class="bg-slate-50 p-6 rounded-3xl shadow-soft">
+          <blockquote class="text-sm text-slate-700">“Contrat clair, délais tenus, zéro surprise.”</blockquote>
+          <figcaption class="mt-3 text-xs text-slate-500">Hanen — Marseille</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-5 gap-8 items-center">
+      <div class="md:col-span-2">
+        <div class="aspect-square rounded-3xl bg-gradient-to-br from-brand-100 to-sand shadow-soft"></div>
+      </div>
+      <div class="md:col-span-3">
+        <h2 class="font-serif text-2xl md:text-3xl mb-4 lang-fr">À propos de Monji</h2>
+        <h2 class="font-arabic text-2xl md:text-3xl mb-4 lang-ar">من هو منجي</h2>
+        <h2 class="font-serif text-2xl md:text-3xl mb-4 lang-en">About Monji</h2>
+        <p class="text-slate-700 leading-relaxed lang-fr">Je m’appelle <strong>Monji</strong>. On me confie des biens et de l’argent depuis des années. Je <strong>crains Dieu</strong>, et l’argent n’est pas ma motivation. Ma fierté, c’est votre confiance. Ici, tout est écrit, prouvé et partagé.</p>
+        <p class="text-slate-700 leading-relaxed lang-ar">اسمي <strong>منجي</strong>. يُؤتمنني الناس على أملاكهم وأموالهم منذ سنوات. <strong>أخاف الله</strong>، وليس الربح هدفي الأول. فخري هو ثقتكم. عندنا كل شيء مكتوب ومُوثق ومُشارك.</p>
+        <p class="text-slate-700 leading-relaxed lang-en">My name is <strong>Monji</strong>. Families have trusted me with their properties and funds for years. I <strong>fear God</strong>, and profit is not my driver. My pride is your trust. Here, everything is written, proven, and shared.</p>
+        <ul class="mt-4 text-sm text-slate-600 grid md:grid-cols-2 gap-2">
+          <li>✔️ Contrats & factures à chaque étape</li>
+          <li>✔️ Relevé mensuel de trésorerie</li>
+          <li>✔️ Photos & vidéos hebdomadaires</li>
+          <li>✔️ Références vérifiables</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="font-serif text-2xl md:text-3xl mb-6 lang-fr">Contact</h2>
+      <h2 class="font-arabic text-2xl md:text-3xl mb-6 lang-ar">اتصل بنا</h2>
+      <h2 class="font-serif text-2xl md:text-3xl mb-6 lang-en">Contact</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="md:col-span-2 bg-slate-50 p-6 rounded-3xl shadow-soft">
+          <form action="https://formspree.io/f/your-id" method="POST" class="space-y-4" aria-label="Formulaire de contact">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label class="text-sm text-slate-600 lang-fr">Nom</label>
+                <label class="text-sm text-slate-600 lang-ar">الاسم</label>
+                <label class="text-sm text-slate-600 lang-en">Name</label>
+                <input name="name" required class="mt-1 w-full rounded-2xl border px-3 py-2" />
+              </div>
+              <div>
+                <label class="text-sm text-slate-600 lang-fr">Téléphone / WhatsApp</label>
+                <label class="text-sm text-slate-600 lang-ar">الهاتف / واتساب</label>
+                <label class="text-sm text-slate-600 lang-en">Phone / WhatsApp</label>
+                <input name="phone" required class="mt-1 w-full rounded-2xl border px-3 py-2" />
+              </div>
+            </div>
+            <div>
+              <label class="text-sm text-slate-600 lang-fr">Message</label>
+              <label class="text-sm text-slate-600 lang-ar">الرسالة</label>
+              <label class="text-sm text-slate-600 lang-en">Message</label>
+              <textarea name="message" rows="4" required class="mt-1 w-full rounded-2xl border px-3 py-2"></textarea>
+            </div>
+            <button class="px-5 py-3 rounded-2xl bg-brand-600 text-white hover:bg-brand-700 shadow-soft lang-fr">Envoyer</button>
+            <button class="px-5 py-3 rounded-2xl bg-brand-600 text-white hover:bg-brand-700 shadow-soft lang-ar">إرسال</button>
+            <button class="px-5 py-3 rounded-2xl bg-brand-600 text-white hover:bg-brand-700 shadow-soft lang-en">Send</button>
+          </form>
+          <p class="text-xs text-slate-500 mt-3 lang-fr">Ou contactez-nous directement sur WhatsApp.</p>
+          <p class="text-xs text-slate-500 mt-3 lang-ar">أو راسلونا مباشرة على واتساب.</p>
+          <p class="text-xs text-slate-500 mt-3 lang-en">Or contact us directly on WhatsApp.</p>
+        </div>
+        <div class="bg-slate-50 p-6 rounded-3xl shadow-soft space-y-2">
+          <div class="font-semibold">DAR AL AMANA</div>
+          <div class="text-sm">Hammamet — Tunisie</div>
+          <div class="text-sm">Tél TN: +216 50 858 230</div>
+          <div class="text-sm">Tél FR: +33 6 00 00 00 00</div>
+          <a href="mailto:contact@daralamana.tn" class="text-sm text-brand-700 underline">contact@daralamana.tn</a>
+          <div class="text-xs text-slate-500">Horaires: Lun–Sam 9h–18h (CET)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+      <div>© <span id="year"></span> DAR AL AMANA — daralamana.fr</div>
+      <div class="flex items-center gap-4">
+        <a href="#process" class="hover:underline lang-fr">Process</a>
+        <a href="#process" class="hover:underline lang-ar">المنهج</a>
+        <a href="#process" class="hover:underline lang-en">Process</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+        <a href="#" class="hover:underline">Mentions légales</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/21650858230" target="_blank" rel="noopener" aria-label="WhatsApp" class="fixed bottom-6 right-6 md:bottom-8 md:right-8 inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-500 text-white shadow-soft hover:bg-emerald-600">
+    <svg viewBox="0 0 32 32" class="w-7 h-7" fill="currentColor" aria-hidden="true"><path d="M19.11 17.33c-.27-.14-1.58-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.86-.86 1.03-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.2-1.34-.81-.72-1.36-1.6-1.52-1.86-.16-.27-.02-.41.12-.54.12-.12.27-.32.4-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.46-.16 0-.34-.02-.52-.02-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.25 0 1.32.97 2.6 1.11 2.78.14.18 1.91 2.92 4.63 4.07.65.28 1.16.45 1.56.58.65.2 1.24.17 1.71.1.52-.08 1.58-.64 1.81-1.26.22-.61.22-1.14.16-1.26-.07-.12-.25-.18-.52-.32z"/><path d="M26.5 5.5C23.7 2.7 19.98 1 16 1 8.8 1 2.95 6.39 2.95 13.23c0 2.25.59 4.44 1.71 6.37L2 31l11.72-2.47c1.86 1.02 3.97 1.56 6.15 1.56 7.2 0 13.05-5.39 13.05-12.23 0-3.27-1.35-6.34-3.82-8.86zM16.87 27.2c-1.9 0-3.77-.51-5.42-1.49l-.39-.23-6.96 1.46 1.47-6.61-.26-.43a10.38 10.38 0 01-1.57-5.67C3.74 7.32 9.2 2.6 16 2.6c3.24 0 6.28 1.23 8.55 3.47 2.27 2.25 3.52 5.22 3.52 8.39 0 6.34-5.46 12.74-11.2 12.74z"/></svg>
+  </a>
+
+  <script>
+    const btnFr = document.getElementById('btn-fr');
+    const btnAr = document.getElementById('btn-ar');
+    const btnEn = document.getElementById('btn-en');
+    const html = document.documentElement;
+    function setLang(lang){
+      html.setAttribute('lang', lang);
+      document.body.style.fontFamily = (lang === 'ar') ? 'Cairo, Inter, system-ui, sans-serif' : 'Inter, system-ui, sans-serif';
+      btnFr.setAttribute('aria-selected', lang==='fr');
+      btnAr.setAttribute('aria-selected', lang==='ar');
+      btnEn.setAttribute('aria-selected', lang==='en');
+    }
+    btnFr.addEventListener('click', ()=> setLang('fr'));
+    btnAr.addEventListener('click', ()=> setLang('ar'));
+    btnEn.addEventListener('click', ()=> setLang('en'));
+    setLang('fr');
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
