@@ -365,33 +365,55 @@
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="py-16">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-5 gap-8 items-center">
-      <div class="md:col-span-2">
-        <div class="aspect-square rounded-3xl bg-gradient-to-br from-brand-100 to-sand shadow-soft"></div>
+<!-- About -->
+<section id="about" class="py-16">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-5 gap-8 items-center">
+    
+    <!-- Colonne image (gauche) -->
+    <div class="md:col-span-2">
       <div class="aspect-square rounded-3xl shadow-soft overflow-hidden">
-  <img src="actifs/img/monji.jpg" 
-       alt="Monji — Dar Al Amana" 
-       class="w-full h-full object-cover" 
-       loading="lazy">
-</div>
-      <div class="md:col-span-3">
-        <h2 class="font-serif text-2xl md:text-3xl mb-4 lang-fr">À propos de Monji</h2>
-        <h2 class="font-arabic text-2xl md:text-3xl mb-4 lang-ar">من هو منجي</h2>
-        <h2 class="font-serif text-2xl md:text-3xl mb-4 lang-en">About Monji</h2>
-        <p class="text-slate-700 leading-relaxed lang-fr">Je m’appelle <strong>Monji</strong>. On me confie des biens et de l’argent depuis des années. Je <strong>crains Dieu</strong>, et l’argent n’est pas ma motivation. Ma fierté, c’est votre confiance. Ici, tout est écrit, prouvé et partagé.</p>
-        <p class="text-slate-700 leading-relaxed lang-ar">اسمي <strong>منجي</strong>. يُؤتمنني الناس على أملاكهم وأموالهم منذ سنوات. <strong>أخاف الله</strong>، وليس الربح هدفي الأول. فخري هو ثقتكم. عندنا كل شيء مكتوب ومُوثق ومُشارك.</p>
-        <p class="text-slate-700 leading-relaxed lang-en">My name is <strong>Monji</strong>. Families have trusted me with their properties and funds for years. I <strong>fear God</strong>, and profit is not my driver. My pride is your trust. Here, everything is written, proven, and shared.</p>
-        <ul class="mt-4 text-sm text-slate-600 grid md:grid-cols-2 gap-2">
-          <li>✔️ Contrats & factures à chaque étape</li>
-          <li>✔️ Relevé mensuel de trésorerie</li>
-          <li>✔️ Photos & vidéos hebdomadaires</li>
-          <li>✔️ Références vérifiables</li>
-        </ul>
+        <!-- Si ton fichier s'appelle monji.jpg -->
+        <img src="/actifs/img/monji.jpg?v=2"
+             alt="Monji — Dar Al Amana"
+             class="w-full h-full object-cover"
+             loading="lazy">
+        <!-- Si ton fichier est encore monji.JPG, remplace la ligne du dessus par celle-ci :
+        <img src="/actifs/img/monji.JPG?v=2" alt="Monji — Dar Al Amana" class="w-full h-full object-cover" loading="lazy">
+        -->
       </div>
     </div>
-  </section>
+
+    <!-- Colonne texte (droite) -->
+    <div class="md:col-span-3">
+      <h2 class="font-serif text-2xl md:text-3xl mb-4 lang-fr">À propos de Monji</h2>
+      <h2 class="font-arabic text-2xl md:text-3xl mb-4 lang-ar">من هو منجي</h2>
+      <h2 class="font-serif text-2xl md:text-3xl mb-4 lang-en">About Monji</h2>
+
+      <p class="text-slate-700 leading-relaxed lang-fr">
+        Je m’appelle <strong>Monji</strong>. On me confie des biens et de l’argent depuis des années.
+        Je <strong>crains Dieu</strong>, et l’argent n’est pas ma motivation. Ma fierté, c’est votre confiance.
+        Ici, tout est écrit, prouvé et partagé.
+      </p>
+      <p class="text-slate-700 leading-relaxed lang-ar">
+        اسمي <strong>منجي</strong>. يُؤتمنني الناس على أملاكهم وأموالهم منذ سنوات.
+        <strong>أخاف الله</strong>، وليس الربح هدفي الأول. فخري هو ثقتكم. عندنا كل شيء مكتوب ومُوثق ومُشارك.
+      </p>
+      <p class="text-slate-700 leading-relaxed lang-en">
+        My name is <strong>Monji</strong>. Families have trusted me with their properties and funds for years.
+        I <strong>fear God</strong>, and profit is not my driver. My pride is your trust.
+        Here, everything is written, proven, and shared.
+      </p>
+
+      <ul class="mt-4 text-sm text-slate-600 grid md:grid-cols-2 gap-2">
+        <li>✔️ Contrats & factures à chaque étape</li>
+        <li>✔️ Relevé mensuel de trésorerie</li>
+        <li>✔️ Photos & vidéos hebdomadaires</li>
+        <li>✔️ Références vérifiables</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 
   <!-- Contact -->
   <section id="contact" class="py-16 bg-white">
